@@ -1,156 +1,164 @@
-🖼️ Imagino – AI Image SaaS Platform
+# 🖼️ Imagino - AI Image SaaS Platform
 
-Imagino is a full-stack, AI-powered SaaS platform for intelligent image processing. With features like image restoration, recoloring, generative fill, object removal, and background removal, Imagino empowers users to effortlessly enhance and transform their images. It also provides a secure, credit-based monetization system and an engaging community showcase.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Next.js](https://img.shields.io/badge/Next.js-14-black?logo=next.js)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?logo=mongodb&logoColor=white)](https://www.mongodb.com/)
 
-🧠 Features
+> A full-stack, AI-powered SaaS platform for intelligent image processing and transformation.
 
-🔐 Authentication & Authorization – Secure user registration and login using Clerk.
+Imagino empowers users to effortlessly enhance and transform their images with cutting-edge AI technology. From image restoration to generative fill, our platform provides professional-grade tools with a secure, credit-based monetization system and an engaging community showcase.
 
-🌍 Community Showcase – Browse, search, and view image transformations with pagination.
+## ✨ Features
 
-🔎 Advanced Image Search – Find images based on their content.
+### Core Image Processing
 
-🧽 Image Restoration – Repair old, blurry, or damaged photos using AI.
+- **🧽 Image Restoration** - Repair old, blurry, or damaged photos using advanced AI algorithms
+- **🎨 Image Recoloring** - Intelligently replace colors of objects within images
+- **🧠 Generative Fill** - Fill in or replace parts of images with AI-generated content
+- **❌ Object Removal** - Remove unwanted elements or people with precision
+- **🧼 Background Removal** - Automatically isolate subjects by removing backgrounds
 
-🎨 Image Recoloring – Intelligently replace colors of objects within an image.
+### Platform Features
 
-🧠 Generative Fill – Fill in or replace parts of an image with AI-generated content.
+- **🔐 Secure Authentication** - User registration and login powered by Clerk
+- **🌍 Community Showcase** - Browse, search, and view transformations with pagination
+- **🔎 Advanced Image Search** - Find images based on their content
+- **💾 High-Quality Downloads** - Save transformed images in premium quality
+- **ℹ️ Transformation Metadata** - Detailed information for each transformation
+- **🧑‍💻 Personal Profile** - Track transformations and monitor credit balance
+- **💳 Secure Payments** - Credit purchasing through Stripe integration
+- **🎟️ Credits System** - Flexible pay-per-use model for image processing
+- **📱 Responsive Design** - Seamless experience across all devices
 
-❌ Object Removal – Remove unwanted elements or people with precision.
+## 🛠️ Tech Stack
 
-🧼 Background Removal – Isolate subjects by automatically removing the background.
+| Category           | Technology                                 |
+| ------------------ | ------------------------------------------ |
+| **Frontend**       | Next.js 14 (App Router), React, TypeScript |
+| **Backend**        | Next.js API Routes                         |
+| **Database**       | MongoDB                                    |
+| **Authentication** | Clerk                                      |
+| **Payments**       | Stripe                                     |
+| **Media Storage**  | Cloudinary                                 |
+| **UI/Styling**     | Tailwind CSS, Shadcn/ui                    |
 
-💾 Downloadable Output – Save your transformed images in high quality.
+## 📁 Project Structure
 
-ℹ️ Transformation Metadata – View details for each image, like transformation type, date, and user.
-
-🧑‍💻 Profile Page – Track your image transformations and view your current credit balance.
-
-💳 Stripe Integration – Securely purchase credits to use for image processing.
-
-🎟️ Credits System – Each image transformation consumes credits, which can be earned or purchased.
-
-📱 Responsive UI/UX – A seamless experience optimized for all screen sizes, from mobile to desktop.
-
-🛠️ Tech Stack
-Category Technology/Service
-Frontend Next.js 14 (App Router), React, TypeScript
-Backend Next.js API Routes
-Database MongoDB
-Auth Clerk
-Payments Stripe
-Media Cloudinary
-UI/Styling Tailwind CSS, Shadcn/ui
-📁 Folder Structure
-Generated code
+```
 imagino/
-├── app/ # Next.js App Router (pages and routes)
-├── components/ # Reusable UI components
-├── lib/ # Utility functions, helpers, and API definitions
-├── models/ # Mongoose schemas for MongoDB
-├── public/ # Static assets (images, icons, etc.)
-├── styles/ # Global CSS styles
-├── types/ # TypeScript type definitions
-└── .env # Environment variables (not committed)
+├── app/                    # Next.js App Router (pages and routes)
+├── components/             # Reusable UI components
+├── lib/                    # Utility functions, helpers, and API definitions
+├── models/                 # Mongoose schemas for MongoDB
+├── public/                 # Static assets (images, icons, etc.)
+├── styles/                 # Global CSS styles
+├── types/                  # TypeScript type definitions
+└── .env                    # Environment variables (not committed)
+```
 
-🔧 Environment Variables
+## 🚀 Getting Started
 
-Create a .env file in the root directory of the project and add the following variables:
+### Prerequisites
 
-Generated env
+- Node.js 18+ and npm
+- MongoDB database
+- Clerk account for authentication
+- Cloudinary account for media storage
+- Stripe account for payments
 
-# NEXT.JS SERVER
+### Installation
 
-NEXT_PUBLIC_SERVER_URL=http://localhost:3000
+1. **Clone the repository**
 
-# MONGODB
+   ```bash
+   git clone https://github.com/your-username/imagino.git
+   cd imagino
+   ```
 
-MONGODB_URL=your_mongodb_connection_string
+2. **Install dependencies**
 
-# CLERK AUTHENTICATION
+   ```bash
+   npm install
+   ```
 
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
-CLERK_SECRET_KEY=
-WEBHOOK_SECRET=
-NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
-NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
-NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/
-NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/
+3. **Set up environment variables**
 
-# CLOUDINARY MEDIA STORAGE
+   Create a `.env` file in the root directory:
 
-NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=
-CLOUDINARY_API_KEY=
-CLOUDINARY_API_SECRET=
+   ```env
+   # NEXT.JS SERVER
+   NEXT_PUBLIC_SERVER_URL=http://localhost:3000
 
-# STRIPE PAYMENTS
+   # MONGODB
+   MONGODB_URL=your_mongodb_connection_string
 
-STRIPE_SECRET_KEY=
-STRIPE_WEBHOOK_SECRET=
-NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=
-IGNORE_WHEN_COPYING_START
-content_copy
-download
-Use code with caution.
-Env
-IGNORE_WHEN_COPYING_END
-🧪 Local Development
+   # CLERK AUTHENTICATION
+   NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
+   CLERK_SECRET_KEY=your_clerk_secret_key
+   WEBHOOK_SECRET=your_webhook_secret
+   NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+   NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+   NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/
+   NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/
 
-Follow these steps to get the project running on your local machine.
+   # CLOUDINARY MEDIA STORAGE
+   NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=your_cloudinary_cloud_name
+   CLOUDINARY_API_KEY=your_cloudinary_api_key
+   CLOUDINARY_API_SECRET=your_cloudinary_api_secret
 
-Clone the repository:
+   # STRIPE PAYMENTS
+   STRIPE_SECRET_KEY=your_stripe_secret_key
+   STRIPE_WEBHOOK_SECRET=your_stripe_webhook_secret
+   NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=your_stripe_publishable_key
+   ```
 
-Generated bash
-git clone https://github.com/your-username/imagino.git
-cd imagino
-IGNORE_WHEN_COPYING_START
-content_copy
-download
-Use code with caution.
-Bash
-IGNORE_WHEN_COPYING_END
+4. **Run the development server**
 
-Install dependencies:
+   ```bash
+   npm run dev
+   ```
 
-Generated bash
-npm install
-IGNORE_WHEN_COPYING_START
-content_copy
-download
-Use code with caution.
-Bash
-IGNORE_WHEN_COPYING_END
+5. **Open your browser**
 
-Set up environment variables:
-Create a .env file in the root and populate it with your keys as shown in the section above.
+   Navigate to [http://localhost:3000](http://localhost:3000) to see the application.
 
-Run the development server:
+## 📊 Available Scripts
 
-Generated bash
-npm run dev
-IGNORE_WHEN_COPYING_START
-content_copy
-download
-Use code with caution.
-Bash
-IGNORE_WHEN_COPYING_END
+```bash
+npm run dev          # Start development server
+npm run build        # Build for production
+npm run start        # Start production server
+npm run lint         # Run ESLint
+npm run type-check   # Run TypeScript type checking
+```
 
-Open your browser and visit http://localhost:3000.
+## 🔧 Configuration
 
-📸 Screenshots
+### Database Setup
 
-Coming soon...
+Ensure your MongoDB connection string is properly configured in the `.env` file. The application uses Mongoose for database operations.
 
-✨ Future Improvements
+### Authentication Setup
 
-Transformation History: A detailed log of all user transformations with time-based filters.
+Configure Clerk authentication by:
 
-Social Sharing: Allow users to share their creations directly to social media platforms.
+1. Creating a Clerk application
+2. Setting up your authentication providers
+3. Configuring redirect URLs
+4. Adding webhook endpoints for user synchronization
 
-Advanced Editing Tools: Implement layer controls, masking, and other manual editing features.
+### Payment Setup
 
-Subscription Tiers: Introduce monthly/yearly subscription plans alongside the credit system.
+Set up Stripe for credit purchases:
 
-📄 License
+1. Create a Stripe account
+2. Configure webhook endpoints
+3. Set up product pricing
+4. Test payment flows in development mode
 
-This project is licensed under the MIT License. See the LICENSE file for more details.
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
