@@ -72,7 +72,7 @@ imagino/
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/your-username/imagino.git
+   git clone https://github.com/AKASH-PRASAD7/Imagino.git
    cd imagino
    ```
 
