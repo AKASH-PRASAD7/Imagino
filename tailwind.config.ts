@@ -1,14 +1,14 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  // Configure your content paths based on your project structure
+  darkMode: ["class"],
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/**/*.{js,ts,jsx,tsx,mdx}", // Add other relevant paths
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
   ],
+  prefix: "",
   theme: {
-    // Settings that OVERRIDE Tailwind's defaults go directly in `theme`
     container: {
       center: true,
       padding: "2rem",
@@ -16,7 +16,6 @@ module.exports = {
         "2xl": "1400px",
       },
     },
-    // Settings that EXTEND Tailwind's defaults go inside `theme.extend`
     extend: {
       colors: {
         border: "hsl(var(--border))",
@@ -67,16 +66,13 @@ module.exports = {
         },
       },
       fontFamily: {
-        // Note: Ensure '--font-ibm-plex' CSS variable is defined in your global CSS
         IBMPlex: ["var(--font-ibm-plex)"],
       },
       backgroundImage: {
-        // Note: Ensure these paths are correct relative to your public/static assets folder
         "purple-gradient": "url('/assets/images/gradient-bg.svg')",
         banner: "url('/assets/images/banner-bg.png')",
       },
       borderRadius: {
-        // Note: Ensure '--radius' CSS variable is defined in your global CSS
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
@@ -84,10 +80,10 @@ module.exports = {
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
-          to: { height: "var(--radix-accordion-content-height)" }, // Ensure this variable is available where needed
+          to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" }, // Ensure this variable is available where needed
+          from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
       },
@@ -97,10 +93,5 @@ module.exports = {
       },
     },
   },
-  plugins: [
-    // Add the tw-animate-css plugin here
-    require("tw-animate-css"),
-    // Add other plugins like forms, typography, aspect-ratio if needed
-    // require('@tailwindcss/forms'),
-  ],
+  plugins: [require("tailwindcss-animate")],
 };
